@@ -9,10 +9,36 @@ const goblinListEl = document.querySelector('.goblins');
 let defeatedGoblinsCount = 0;
 let playerHP = 10;
 let goblins = [
-    { id: 1, name: McStabby, hp: 2},
-    { id: 2, name: LordStabbo, hp: 4},
+    { id: 1, name: McStabby, hp: 2 },
+    { id: 2, name: LordStabbo, hp: 4 },
 ];
-// set event listeners 
+// set event listeners
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault;
+    // user has supplied a name + submitted the form
+    const date = new FormData(form);
+    
+    const goblinName = data.get('goblin-name');
+
+    // make a new goblin object with that user input
+
+    const newGoblin = {
+        name: goblinName,
+        hp: Math.ceil(Math.random() * 5),
+    };
+
+    // add that object to the array of goblins in state
+
+    goblins.push(newGoblin);
+
+    displayGoblins();
+});
+
   // get user input
+
+displayGoblins() {
+  
+}
   // use user input to update state 
   // update DOM to reflect the new state
