@@ -89,3 +89,4 @@ function goblinClickHandler(goblin) {
 }
   // use user input to update state 
   // update DOM to reflect the new state
+  // barebones done, still a work in progress
