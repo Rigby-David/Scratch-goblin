@@ -1,1 +1,30 @@
 /* add home page styles here */
+/* .goblins {
+    border: 5px solid black;
+    display: flex;
+} */
+
+.goblin {
+    border: 1px solid black;
+    display: flex;
+    background-color: aqua;
+    align-content: flex-end;
+}
+
+/* .div {
+    max-width: 100%;
+} */
+
+.adventurer-stats {
+    /* border: 1px solid black; */
+}
+
+.adventurer {
+    border: 1px solid black;
+    background-color: chartreuse;
+}
+
+.defeated-goblins {
+    border: 1px solid black;
+    background-color: chartreuse;
+}

@@ -13,39 +13,41 @@
 </head>
 
 <body>
-    <header>
+    <!-- <header>
         <div class="gutter-right logo">
             <img src="./assets/big-logo.png" />
         </div>
-    </header>
+    </header> -->
     <main>
-        <div class="adventurer-stats">
-            <div class="defeated-goblins">
-                <p>
-                    You have defeated <span id="defeated-number">goblins</span>
-                    <div class="defeated-list"></div>
-                </p>
+        <div class="div">
+            <div class="adventurer-stats">
+                <div class="defeated-goblins">
+                    <p>
+                        You have defeated <span id="defeated-number">goblins</span>
+                        <div class="defeated-list"></div>
+                    </p>
+                </div>
+                <div class="adventurer">
+                    <p>
+                        Your HP
+                        <span id="adventurer-HP">10</span>
+                    </p>
+                    <img id="adventuer-img" src="" alt="">
+                </div>
             </div>
-            <div class="adventurer">
-                <p>
-                    Your HP
-                    <span id="adventurer-HP">10</span>
-                </p>
-                <img id="adventuer-img" src="" alt="">
-            </div>
-        </div>
-        <div class="goblin-stats">
-            <div>
-                <form id="form">
-                    <input name="goblin-name" />
-                    <button>Challenge goblin</button>
-                </form>
-                <div class="goblins"></div>
+            <div class="goblin-stats">
+                <div>
+                    <form id="form">
+                        <input name="goblin-name" />
+                        <button>Challenge goblin</button>
+                    </form>
+                    <div class="goblins"></div>
+                </div>
             </div>
         </div>
     </main>
     <footer>
-        <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
+        <div class="copy gutter-right">&copy; 2022 Alchemy Code Lab</div>
     </footer>
 
     <script type="module" src="./app.js"></script>

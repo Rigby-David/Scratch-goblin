@@ -29,14 +29,20 @@ body {
     
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
+    background-image: url(../assets/forest.png);
+    background-size: 105%;
+    background-position: center;
+    display: flex;
 }
 
 main {
+    height: 100%;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
+    width: 500px; */
 }
 
 section {
@@ -88,4 +94,8 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+}
+
+* {
+    box-sizing: border-box;
 }
