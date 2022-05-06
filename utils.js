@@ -10,7 +10,7 @@ export function renderGoblin(goblinData) {
     nameEl.textContent = goblinData.hp < 0 ? 0 : goblinData.hp
     hpEl.textContent = goblinData.hp > 0 ? '😈' : '🔥';
 
-    if (goblinData.hp < 0) {
+    if (goblinData.hp <= 0) {
         goblinEl.classList.add('dead');
     }
 

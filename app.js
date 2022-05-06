@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-
+import { renderGoblin } from './utils.js';
 
 const defeatedNumberEl = document.querySelector('#defeated-number');
 const adventurerHPEl = document.querySelector('#adventurer-HP');
