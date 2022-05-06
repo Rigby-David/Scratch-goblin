@@ -61,9 +61,22 @@ function goblinClickHandler(goblin) {
     const playerHit = Math.random();
 
     if (playerHit < 1) {
-      goblin.hp--;
-      displayGoblins();
-      alert('')
+        goblin.hp--;
+        displayGoblins();
+        alert(`You hit ${goblin.name}`);
+        if (goblin.hp === 0) {
+            defeatedGoblinsCount++;
+            defeatedNumberEl.textContent = defeatedGoblinsCount;
+        }
+    } else {
+        alert ('You missed');
+    }
+    const goblinHit = Math.random();
+    if (goblinHit < 1) {
+        playerHP--;
+        adventurerHPEl.textContent = playerHP;
+        alert (`${goblin.name} hit you!`);
+
     }
 }
   // use user input to update state 
