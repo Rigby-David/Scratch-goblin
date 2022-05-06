@@ -1,4 +1,6 @@
 // import functions and grab DOM elements
+
+
 const defeatedNumberEl = document.querySelector('#defeated-number');
 const adventurerHPEl = document.querySelector('#adventurer-HP');
 const adventurerImgEl = document.querySelector('#adventurer-img');
@@ -17,7 +19,7 @@ let goblins = [
 form.addEventListener('submit', (e) => {
     e.preventDefault;
     // user has supplied a name + submitted the form
-    const date = new FormData(form);
+    const data = new FormData(form);
     
     const goblinName = data.get('goblin-name');
 
@@ -37,8 +39,14 @@ form.addEventListener('submit', (e) => {
 
   // get user input
 
-displayGoblins() {
-  
+function displayGoblins() {
+    goblinListEl.textContent = '';
+
+    for (let goblin of goblins) {
+      const goblinEl = renderGoblin('goblin');
+    }
 }
+
+
   // use user input to update state 
   // update DOM to reflect the new state
