@@ -11,13 +11,13 @@ const goblinListEl = document.querySelector('.goblins');
 let defeatedGoblinsCount = 0;
 let playerHP = 10;
 let goblins = [
-    { id: 1, name: McStabby, hp: 2 },
-    { id: 2, name: LordStabbo, hp: 4 },
+    { name: 'McStabby', hp: 2 },
+    { name: 'LordStabbo', hp: 4 },
 ];
 // set event listeners
 
 form.addEventListener('submit', (e) => {
-    e.preventDefault;
+    e.preventDefault();
     // user has supplied a name + submitted the form
     const data = new FormData(form);
     
@@ -35,6 +35,7 @@ form.addEventListener('submit', (e) => {
     goblins.push(newGoblin);
 
     displayGoblins();
+    form.reset();
 });
 
   // get user input
@@ -43,11 +44,13 @@ function displayGoblins() {
     goblinListEl.textContent = '';
 
     for (let goblin of goblins) {
-        const goblinEl = renderGoblin('goblin');
+        const goblinEl = renderGoblin(goblin);
     
         goblinEl.addEventListener('click', () => {
             goblinClickHandler(goblin);
         });
+
+        goblinListEl.append(goblinEl);
     }
 }
 
@@ -60,7 +63,7 @@ function goblinClickHandler(goblin) {
 
     const playerHit = Math.random();
 
-    if (playerHit < 1) {
+    if (playerHit < .5) {
         goblin.hp--;
         displayGoblins();
         alert(`You hit ${goblin.name}`);
@@ -72,11 +75,16 @@ function goblinClickHandler(goblin) {
         alert ('You missed');
     }
     const goblinHit = Math.random();
-    if (goblinHit < 1) {
+    if (goblinHit < .5) {
         playerHP--;
         adventurerHPEl.textContent = playerHP;
         alert (`${goblin.name} hit you!`);
-
+        if (playerHP === 0) {
+            alert ('game over');
+            adventurerImgEl.classList.add('game-over');
+        }
+    } else {
+        alert (`${goblin.name} tried to you and missed`);
     }
 }
   // use user input to update state 
